@@ -1,0 +1,190 @@
+
+	
+.project
+	&__slider 
+		overflow: hidden
+		max-width: 1440px
+		margin-inline: auto
+
+		.swiper-wrapper 
+			align-items: center
+
+		.swiper-slide 
+			$large: 1
+			$medium: .5
+			$small: .3
+
+			$mediumTranslate: 24%
+			$smallTranslate: 82%
+
+			display: flex
+			position: relative
+			+adap('width', 522, minusPercent(40, 522))
+			+adap('height', 381, minusPercent(40, 381))
+
+			transform: scale($small) !important
+			transition: transform .3s linear
+
+			&:has(+.swiper-slide-prev)
+				transform: translateX($smallTranslate) scale($small) !important
+
+			&-prev
+				transform: translateX($mediumTranslate) scale($medium) !important
+
+			&-next
+				transform: translateX(-$mediumTranslate) scale($medium) !important
+ 
+			&-next 
+				&+.swiper-slide
+					transform: translateX(-$smallTranslate) scale($small) !important
+
+
+		.swiper-backface-hidden .swiper-slide 
+			// transform: scale(.7) translateZ(0)
+	        
+		.swiper-slide-active   
+			transform: scale(1) !important
+			opacity: 1 !important
+
+		.swiper-backface-hidden .swiper-slide-active 
+			transform: scale(1) translateZ(0) !important
+	
+	&__item 
+		position: relative
+		width: 100%
+
+		padding-top: calc(381 / 522 * 100%)
+
+		img 
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+
+			object-fit: cover
+			+adap('border-radius', 20, 16)
+
+
+	@media (max-width: #{$firstBreakpoint + px})
+		&__slider 
+			.swiper-slide
+				transform: scale(.8)
+
+			.swiper-backface-hidden .swiper-slide 
+				transform: scale(.8) translateZ(0)
+
+	@media (max-width: 991px)
+		&__slider 
+			.swiper-slide
+				transform: scale(.9)
+
+			.swiper-backface-hidden .swiper-slide 
+				transform: scale(.9) translateZ(0)
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,453 @@
+body 
+	color: #000
+
+
+.section
+	+adap('padding-block', math.div($section_gap, 2), 24)
+
+	&-small
+		+adap('padding-block', math.div($section_gap, 3), 16)
+
+		&-top 
+			+adap('padding-top', math.div($section_gap, 3), 16)   
+
+		&-bottom 
+			+adap('padding-bottom', math.div($section_gap, 3), 16)
+
+	&-bottom
+		+adap('padding-bottom', math.div($section_gap, 2), 24)
+
+	&-top
+		+adap('padding-top', math.div($section_gap, 2), 24)
+
+	&-bg
+		+adap('margin-block', math.div($section_gap, 2), 24)
+		
+		background: $bg
+			
+		&+.section-bg
+			+adap('margin-top', math.div($section_gap*-1, 2), -24)
+
+
+	&__top 
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+adap('gap', 20, 16)
+		+adap('margin-bottom', 60, 24)
+
+		&-center 
+			display: grid
+			justify-items: center
+			grid-template-columns: 100%
+
+			text-align: center
+
+		@media (max-width: 991px)
+			display: grid
+
+	&__bottom 
+		+adap('margin-top', 40, 24)
+
+	&__text 
+		max-width: 625px
+		color: #6d6d6d
+		+adap('font-size', 18, 16)
+
+
+[class^="title"]
+	text-wrap: balance
+
+.title 
+	+title
+
+	&-2
+		+title-2
+
+	&-3
+		+title-3
+
+	&-4
+		+title-4
+
+
+	&_center 
+		text-align: center
+
+
+	
+.buttons
+	display: flex
+	align-items: center
+	gap: 12px 20px 
+	flex-wrap: wrap
+	justify-content: center
+
+	>*
+		flex: 1 1 auto
+
+
+.button
+	+adap('min-width', 195, 160)
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: em(12) em(24)
+	+adap('min-height', 48, 44)
+
+	background: $active
+	border-radius: 12px 
+
+	color: #fff
+	font-weight: 500
+	white-space: nowrap
+
+	+hov
+		background: dark($active, 12%)
+
+	&_border 
+		border: 1px solid $active
+		background: transparent
+
+		color: $active
+
+		+hov
+			background: $active
+			color: #fff
+
+
+.social 
+	display: flex
+	align-items: center
+	gap: 16px
+
+	&__item 
+		display: flex
+		+t
+
+		+hov
+			scale: 1.1 
+
+
+		svg 
+			+adap('width', 44, 32)
+			+adap('height', 44, 32)
+
+			fill: #fff
+
+
+
+
+
+
+
+
+
+.parallax-items
+	// position: relative
+	// height: 100vh
+	// overflow: hidden
+
+
+
+.section
+	&:has(.parallax)
+		position: relative 
+		z-index: 1 
+		
+
+.parallax
+	position: absolute   
+	z-index: 3
+	will-change: transform
+  
+
+.parallax
+	&-1
+		right: -33px
+		bottom: -87px
+
+		width: 122px
+		height: 122px
+
+		opacity: .5
+	
+	&-2
+		left: -130px
+		bottom: 0
+
+		width: 240px
+		height: 360px
+	
+	&-3
+		left: 100px
+		bottom: 0
+
+		width: 122px
+		height: 122px
+	
+		opacity: .5
+	
+	&-4
+		right: 25%
+		top: 0
+		z-index: 0
+
+		width: 250px
+		height: 450px
+	
+
+	// &-3
+	// 	left: 30vw
+	// 	top: 28%
+
+	// 	width: 122px
+	// 	height: 122px
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+

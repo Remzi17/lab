@@ -1,0 +1,344 @@
+.card
+	position: relative
+
+	padding-top: calc(var(--headerFixedHeight) + 20px)
+
+	max-width: 1920px
+	margin-inline: auto
+
+	overflow: hidden
+	
+	.crumbs
+		@media (max-width: 1300px)
+			+adap('max-width', 545, 564, 1300, 992 , $min: true)
+		
+		@media (max-width: 991px)
+			max-width: 371px
+
+		&:after
+			background: rgba(28, 25, 24, .61)
+
+	&__slider 
+		position: relative
+		width: 100%
+		+adap('max-width', 847, 400)
+		height: 100%
+
+		+adap('border-radius', 20, 16)
+		overflow: hidden
+		cursor: pointer
+
+		// &:after
+		// 	content: ''
+		// 	+abs  
+		// 	z-index: 1
+		// 	background: url("data:image/svg+xml,%3Csvg width='927' height='600' viewBox='0 0 927 600' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='927' height='600' fill='black' fill-opacity='0.2' /%3E%3Crect width='927' height='600' fill='url(%23paint0_linear_248_396)' /%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_248_396' x1='463.5' y1='0' x2='463.5' y2='490.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-opacity='0.9' /%3E%3Cstop offset='1' stop-color='%231C1918' stop-opacity='0' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") center / cover no-repeat
+		// 	pointer-events: none
+
+	&-container 
+		height: 100%
+
+	&__pagination 
+		width: auto
+		display: flex
+		flex-wrap: nowrap
+		position: absolute  
+		left: 50%
+		translate: -50% 0
+		bottom: 24px
+		z-index: 4
+
+
+	&__content
+		display: grid
+		grid-template-columns: auto 1fr
+
+	&__right 
+		position: relative
+		z-index: 3
+
+		+adap('min-height', 514, 400)
+		width: 100%
+		margin-left: auto
+		padding-block: 40px 
+		+adap('border-bottom-right-radius', 20, 16)
+		overflow: hidden
+
+		&>* 
+			padding-left: 40px
+
+	&__art 
+		margin-bottom: 12px
+
+		color: #999
+		font-size: 14px
+
+	&__title 
+		margin-bottom: 20px
+		+adap('font-size', 24, 20)
+		+a
+		line-height: 1.41	
+
+	&__items 
+		position: relative
+		display: grid
+		+adap('gap', 20, 16)
+		+adap('margin-bottom', 50, 20)
+		padding-top: 20px
+ 
+		&:before
+			content: ''
+			position: absolute
+			right: 0
+			top: 0
+			z-index: -1
+			width: 110%
+			height: 100vh
+
+			background: #eef1f4
+			+adap('border-top-right-radius', 20, 16)
+
+	&__item 
+		display: grid
+		gap: 4px
+
+		line-height: 1.3
+		font-size: 14px	
+
+		&-title 
+			+adap('font-size', 18, 16)
+
+
+		&-checkboxes 
+			position: relative
+
+			display: flex
+			gap: 12px
+			flex-wrap: wrap
+
+
+			.checkbox 
+				position: static
+
+				display: grid
+				padding-top: 40px
+				+adap('width', 62, 32)
+				+adap('flex-basis', 52, 24)
+				flex-grow: 0
+				flex-shrink: 0
+
+				&__text 
+					position: absolute
+					left: 0
+					top: 4px
+
+					order: -1
+					white-space: nowrap
+					opacity: 0 
+					+t
+
+				&__input
+					+adap('width', 62, 32)
+					+adap('height', 52, 24)
+
+					&:checked
+						&:before
+							box-shadow: 0 0 30px 0 rgba(235, 136, 71, 0.25)
+
+						&+.checkbox__text 
+							opacity: 1
+
+					&:before
+						width: 100%
+						height: 100%
+						border-radius: 4px
+						flex: 1 1 auto
+
+						background: var(--color)
+						border: none
+						+t
+
+	&__price 
+		margin-bottom: 20px
+		font-size: 20px
+		color: $active
+
+
+
+	@media (max-width: 991px)
+		&__content 
+			grid-template-columns: 100%
+
+		&__slider 
+			max-width: 100%
+
+		&__slider,
+		&__img
+			+adap('height', 380, 300, 991)
+
+		.crumbs
+			max-width: 100%
+
+			&-wrapper 
+				position: static
+				margin-bottom: 20px
+
+		&__right 
+			border-radius: 16px
+ 
+		&__items 
+			&:before
+				width: 100%
+				border-radius: 16px
+
+.card-info 
+	&-wrapper
+		display: flex
+		+adap('gap', 122, 20)
+		align-items: flex-start
+		justify-content: space-between
+
+	&__img 
+		+adap('width', 505, minusPercent(30, 505))
+		+adap('height', 574, minusPercent(30, 574))
+
+	&__right 
+		display: grid
+		align-content: start
+		justify-items: start
+		+adap('padding-block', 86, 28)
+		width: 368px
+
+	&__title 
+		+adap('margin-bottom', 20, 16)
+		padding-bottom: 8px
+
+		+adap('font-size', 24, 20)
+		font-weight: 800
+		+a
+		border-bottom: 1px solid #eb8847
+
+	&__table 
+		font-size: 16px
+		font-weight: 600
+
+		th, td
+			padding-block: 10px
+			border-bottom: 1px solid #b2b2b2
+			text-align: left
+
+		th  
+			white-space: nowrap
+
+		td
+			padding-left: 24px
+
+	&__items 
+		width: 100%
+
+	&__item 
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 12px
+
+
+
+	@media (max-width: 767px)
+		&-wrapper
+			display: grid
+			gap: 20px
+
+		&__left 
+			order: 1
+
+		&__right 
+			width: 100%
+			padding-bottom: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

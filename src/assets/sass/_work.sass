@@ -1,0 +1,186 @@
+.work
+	&__header 
+		display: flex
+		flex-wrap: wrap
+		+adap('gap', 36, 20)
+		justify-content: center
+		+adap('margin-bottom', 60, 24)
+		background: #fff
+
+	&__button 
+		+adap('font-size', 24, 20)
+		text-transform: uppercase
+
+		&.active 
+			color: $active
+
+	&-wrapper
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		gap: 20px
+
+	&__item
+		display: grid
+		grid-template-rows: auto 1fr
+		+adap('border-radius', 20, 16)
+		background: #eef1f4
+
+		overflow: hidden
+		
+		&-img 
+			width: 100%
+			height: auto
+				
+			aspect-ratio: 413/354
+			+adap('border-radius', 20, 16)
+			object-fit: cover
+
+		&-content 
+			display: grid
+			gap: 8px
+			align-content: start
+			padding: 20px 16px
+
+		&-row 
+			display: flex
+			align-items: center
+			gap: 12px
+			justify-content: space-between
+
+		&-col 
+			display: grid
+			gap: 8px
+
+		&-price 
+			color: $active
+			white-space: nowrap
+
+		&-title 
+			font-size: 18px
+			font-weight: 600
+
+		&-text 
+			font-size: 14px
+			color: #999
+
+
+
+	@media (max-width: 767px)
+		&__header
+			position: sticky
+			left: 0
+			top: var(--headerFixedHeight)
+			z-index: 5
+			padding-block: 12px
+			margin-block: -12px
+			
+		&-wrapper
+			grid-template-columns: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

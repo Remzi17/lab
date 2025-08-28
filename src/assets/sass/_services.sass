@@ -1,0 +1,184 @@
+.services
+	&-wrapper
+		--columns: 3
+		display: grid
+		+adap('gap', 20, 12)
+ 
+		@media (min-width: 1200px)
+			grid-template-columns: repeat(var(--columns), 1fr)
+ 
+		@media (max-width: 1199px)
+			grid-template-columns: repeat(3, 1fr)
+			
+
+	&__item
+		display: grid
+		grid-template-rows: auto 1fr
+		+adap('border-radius', 20, 16)
+		background: #EEF1F4
+ 
+		overflow: hidden
+		
+		&-img 
+			width: 100%
+			height: auto
+			
+			aspect-ratio: 413/354
+			+adap('border-radius', 20, 16)
+			object-fit: cover
+
+		&-content 
+			display: grid
+			gap: 8px
+			align-content: start
+			padding-block: 20px
+			+adap('padding-inline', 16, 12)
+
+
+		&-title 
+			font-size: 18px
+			font-weight: 600
+
+		&-text 
+			font-size: 14px
+			color: #999
+
+
+	&__top 
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		+adap('gap', 20, 12)
+		+adap('margin-bottom', 20, 16)
+
+	&__link
+		position: relative
+		z-index: 3
+		
+		+adap('padding', 40, 16)
+		+adap('min-height', 126, 60)
+		display: flex
+		justify-content: center
+		align-items: center
+
+		+adap('border-radius', 30, 16)
+
+		+a
+		+adap('font-size', 24, 16)
+		font-weight: 800
+		
+		background: #eef1f4
+		+t
+
+		+hov 
+			background: dark(#eef1f4, 10%)
+			
+
+	@media (max-width: 767px)
+		&-wrapper
+			grid-template-columns: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

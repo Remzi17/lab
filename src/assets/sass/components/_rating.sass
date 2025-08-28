@@ -1,0 +1,83 @@
+$star-size: 32px 
+$star-gap: 16px 
+$star-count: 5
+
+$star-icon-default: 'PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIyMXB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgd2lkdGg9IjIwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGUvPjxkZXNjLz48ZGVmcy8+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSI+PGcgZmlsbD0iIzAwMDAwMCIgaWQ9IkNvcmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yOTYuMDAwMDAwLCAtNDIyLjAwMDAwMCkiPjxnIGlkPSJzdGFyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyOTYuMDAwMDAwLCA0MjIuNTAwMDAwKSI+PHBhdGggZD0iTTEwLDE1LjI3MyBMMTYuMTgsMTkgTDE0LjU0NSwxMS45NzEgTDIwLDcuMjQ0IEwxMi44MDksNi42MjcgTDEwLDAgTDcuMTkxLDYuNjI3IEwwLDcuMjQ0IEw1LjQ1NSwxMS45NzEgTDMuODIsMTkgTDEwLDE1LjI3MyBaIiBpZD0iU2hhcGUiLz48L2c+PC9nPjwvZz48L3N2Zz4='
+
+$star-icon-active: 'PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTEwIDE1Ljc3MyA2LjE4IDMuNzI3LTEuNjM1LTcuMDI5TDIwIDcuNzQ0bC03LjE5MS0uNjE3TDEwIC41IDcuMTkxIDcuMTI3IDAgNy43NDRsNS40NTUgNC43MjdMMy44MiAxOS41IDEwIDE1Ljc3M1oiIGZpbGw9IiNmZmRkNTQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xhc3M9ImZpbGwtMDAwMDAwIj48L3BhdGg+PC9zdmc+'
+
+
+=background-image-spaced($width, $height, $margin-right, $image)
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="#{$width + $margin-right}" height="#{$height}"><image width="#{$width}" height="#{$height}" xlink:href="data:image/svg+xml;base64,#{$image}" /></svg>')
+
+.rating 
+	display: flex 
+	align-items: center
+	gap: 10px
+
+	&__label 
+		font-size: 14px
+		
+	&__body 
+		position: relative
+		width: calc(($star-size*$star-count) + ($star-gap * ($star-count - 1))) 
+
+		&:before
+			content: ''
+
+			display: block
+			width: 100%
+			height: $star-size
+
+			+background-image-spaced($star-size, $star-size, $star-gap, $star-icon-default)
+
+	&__active	
+		position: absolute
+		left: 0
+		top: 0
+
+		width: 0%
+		height: 100%
+
+		overflow: hidden
+		+t(.3)
+
+		&:before
+			content: ''
+
+			position: absolute
+			top: 0
+			left: 0
+
+			width: 100%
+			height: $star-size
+
+			+background-image-spaced($star-size, $star-size, $star-gap, $star-icon-active) 
+			
+	&__items
+		display: flex
+		position: absolute
+		left: 0
+		top: 0
+
+		width: 100%
+		height: 100%
+
+		input 
+			flex: 0 0 math.div(100%, $star-count) 
+			height: 100% 
+			margin: 0
+			padding: 0 
+
+			opacity: 0
+			border: none
+			cursor: pointer
+
+	&__stars 
+		display: flex
+		align-items: center
+		gap: 5px 
+		
+		svg 
+			&.active
+				fill: $active

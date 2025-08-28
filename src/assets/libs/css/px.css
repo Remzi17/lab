@@ -1,0 +1,326 @@
+[class*="_px"] {
+
+	will-change: transform;
+
+
+}
+
+
+
+
+._pxLeft {
+	--offset-x: -100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxLeft linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxLeft {
+	from {
+		transform: translateX(var(--offset-x));
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+._pxToLeft {
+	--offset-x: -100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxToLeft linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxToLeft {
+	to {
+		transform: translateX(var(--offset-x));
+	}
+}
+
+
+
+
+._pxRight {
+	--offset-x: 100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxRight linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxRight {
+	from {
+		transform: translateX(var(--offset-x));
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+._pxToRight {
+	--offset-x: 100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxToRight linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxToRight {
+	to {
+		transform: translateX(var(--offset-x));
+	}
+}
+
+
+
+
+._pxTop {
+	--offset-y: -100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxTop linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxTop {
+	from {
+		transform: translateY(var(--offset-y));
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+._pxToTop {
+	--offset-y: -100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxToTop linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxToTop {
+	to {
+		transform: translateY(var(--offset-y));
+	}
+}
+
+
+
+
+._pxBottom {
+	--offset-y: 100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxBottom linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxBottom {
+	from {
+		transform: translateY(var(--offset-y));
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+._pxToBottom {
+	--offset-y: 100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxToBottom linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxToBottom {
+	to {
+		transform: translateY(var(--offset-y));
+	}
+}
+
+
+
+
+._pxLeftTop {
+	--offset-x: -100px;
+	--offset-y: -100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxLeftTop linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxLeftTop {
+	from {
+		transform: translate(var(--offset-x), var(--offset-y));
+	}
+
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+._pxToLeftTop {
+	--offset-x: -100px;
+	--offset-y: -100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxToLeftTop linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxToLeftTop {
+	to {
+		transform: translate(var(--offset-x), var(--offset-y));
+	}
+}
+
+
+
+
+._pxRightTop {
+	--offset-x: 100px;
+	--offset-y: -100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxRightTop linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxRightTop {
+	from {
+		transform: translate(var(--offset-x), var(--offset-y));
+	}
+
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+._pxToRightTop {
+	--offset-x: 100px;
+	--offset-y: -100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxToRightTop linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxToRightTop {
+	to {
+		transform: translate(var(--offset-x), var(--offset-y));
+	}
+}
+
+
+
+
+._pxLeftBottom {
+	--offset-x: -100px;
+	--offset-y: 100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxLeftBottom linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxLeftBottom {
+	from {
+		transform: translate(var(--offset-x), var(--offset-y));
+	}
+
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+._pxToLeftBottom {
+	--offset-x: -100px;
+	--offset-y: 100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxToLeftBottom linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxToLeftBottom {
+	to {
+		transform: translate(var(--offset-x), var(--offset-y));
+	}
+}
+
+
+
+
+._pxRightBottom {
+	--offset-x: 100px;
+	--offset-y: 100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxRightBottom linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxRightBottom {
+	from {
+		transform: translate(var(--offset-x), var(--offset-y));
+	}
+
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+._pxToRightBottom {
+	--offset-x: 100px;
+	--offset-y: 100px;
+	--start: entry 0%;
+	--end: cover 70%;
+
+	animation: pxToRightBottom linear both;
+	animation-timeline: view();
+	animation-range: var(--start) var(--end);
+}
+
+@keyframes pxToRightBottom {
+	to {
+		transform: translate(var(--offset-x), var(--offset-y));
+	}
+}

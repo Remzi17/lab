@@ -1,0 +1,143 @@
+@@include('assets/html/head.html', {
+"class" : '" "'
+})
+
+<div class="card">
+	<div class="container">
+		<div class="card__content">
+			<div class="slider card__slider">
+				<div class="swiper card-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="assets/img/card/1.webp" class="card__img" alt="" pic>
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/card/1.webp" class="card__img" alt="" pic>
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/card/1.webp" class="card__img" alt="" pic>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination slider__pagination card__pagination"></div>
+				@@include("assets/html/crumbs.html", {
+				"container" : false,
+				"list": [
+				{
+				"title":"Каталог",
+				"link":'"#"'
+				},
+				{
+				"title":"Опоры",
+				"link":'"#"'
+				},
+				{
+				"title":"Опоры",
+				"link":'"#"'
+				},
+				{
+				"title":"Мадрид",
+				"link":'"#"'
+				},
+				{
+				"title":"Опора МАДРИД, L.800 H.720",
+				"link":'"#"'
+				},
+				]
+				})
+			</div>
+			<div class="card__right">
+				<div class="card__art">арт. OP.08.720.9005</div>
+				<div class="card__title">Опора МАДРИД, <br> L.595 H.720</div>
+
+				<div class="card__items">
+					<div class="card__item">
+						<div class="card__item-title">Размеры:</div>
+						<div class="card__item-text">Высота - 720 мм | Ширина 595 мм</div>
+					</div>
+					<div class="card__item">
+						<div class="card__item-title">Отделка:</div>
+						<div class="card__item-checkboxes">
+							<label class="checkbox" style="--color: #000">
+								<input class="checkbox__input" type="radio" value="Черный бархат матовый" name="color" checked>
+								<span class="checkbox__text">Черный бархат матовый</span>
+							</label>
+							<label class="checkbox" style="--color: #fff">
+								<input class="checkbox__input" type="radio" value="Белый" name="color">
+								<span class="checkbox__text">Белый</span>
+							</label>
+							<label class="checkbox" style="--color: #919191">
+								<input class="checkbox__input" type="radio" value="Серый" name="color">
+								<span class="checkbox__text">Серый</span>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="card__bottom">
+					<div class="card__price">1.400 р.</div>
+					<button class="button" type="button" data-modal="popup-call" data-text=".card__right,.card__item-checkboxes input:checked,.popup-call .modal-info">Заказать</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="card-info">
+	<div class="container">
+		<div class="card-info-wrapper">
+			<div class="card-info__right">
+				<div class="card-info__title">Характеристики:</div>
+				<div class="card-info__table">
+					<table>
+						<tr>
+							<th>Артикул:</th>
+							<td>OP.08.720.9005</td>
+						</tr>
+						<tr>
+							<th>Ширина (W, мм):</th>
+							<td>595</td>
+						</tr>
+						<tr>
+							<th>Высота (Н, мм):</th>
+							<td>720</td>
+						</tr>
+						<tr>
+							<th>Вес опоры:</th>
+							<td>5,4 кг</td>
+						</tr>
+						<tr>
+							<th>Артикул:</th>
+							<td>OP.08.720.9005</td>
+						</tr>
+						<tr>
+							<th>Артикул:</th>
+							<td>OP.08.720.9005</td>
+						</tr>
+						<tr>
+							<th>Максимальная нагрузка:</th>
+							<td>80 кг</td>
+						</tr>
+						<tr>
+							<th>Страна производителя:</th>
+							<td>Россия</td>
+						</tr>
+						<tr>
+							<th>Количество в упаковке:</th>
+							<td>1</td>
+						</tr>
+						<tr>
+							<th>Акция:</th>
+							<td>Нет</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="card-info__left">
+				<img src="assets/img/card/2.webp" class="card-info__img" width="505" height="574" alt="" loading="lazy" decoding="async">
+			</div>
+		</div>
+	</div>
+</div>
+
+@@include('assets/html/foot.html')

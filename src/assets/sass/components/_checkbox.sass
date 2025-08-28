@@ -1,0 +1,76 @@
+$checkbox-width: 12px
+$checkbox-height: 12px
+$checkbox-gap: 16px
+
+$checkbox-active-color: #fff
+$checkbox-bg: #fff 
+$checkbox-background-size: 55%
+
+$checkbox-border-color: dark($gray, 15%) 
+$checkbox-border-radius: 2px 
+
+.checkbox 
+	position: relative
+	display: flex
+	align-items: center 
+	+adap('gap', 16, 8) 
+
+	user-select: none
+	cursor: pointer
+ 
+	&.error
+		color: #f03
+			  
+		.checkbox__input
+			&:before
+				border-color: #f03
+	 
+	&__input
+		position: relative
+		
+		display: flex
+		margin: 0
+		flex: 0 0 $checkbox-width
+		width: $checkbox-width
+		height: $checkbox-height
+
+		cursor: pointer
+ 
+		&:before
+			content: '' 
+
+			flex: 0 0 $checkbox-width
+			width: $checkbox-width
+			aspect-ratio: 1
+
+			border: 1px solid $checkbox-border-color
+			border-radius: $checkbox-border-radius 
+			transition: background-color .3s, border-color .3s
+			box-sizing: border-box
+
+		&:disabled~span
+			opacity: .4 
+			cursor: not-allowed 
+
+		&:focus-visible
+			outline: none 
+			
+			&:before 
+				border-color: dark($checkbox-active-color, 20%)
+						
+	&-text 
+		position: relative
+
+		.checkbox
+			&__text 
+				+t 
+
+			&__input 
+				+hidden 
+
+				&:before
+					display: none
+
+				&:checked~.checkbox__text
+					color: $active
+

@@ -1,0 +1,277 @@
+.catalog
+	&__content 
+		display: grid
+		grid-template-columns: minmax(240px, percent(306, $containerWidth)) 1fr 
+		+adap('gap', 40, 24) 
+		align-items: start
+
+		.services
+			&-wrapper
+				@media (max-width: 991px)
+					grid-template-columns: repeat(2, 1fr)
+
+	&__left 
+		position: sticky
+		left: 0
+		top: calc(var(--headerFixedHeight) + 20px)
+
+		display: grid
+		+adap('gap', 40, 20)
+		align-content: start
+		padding-left: 4px
+		margin-left: -4px 
+ 
+		+scrollbar(calc(100dvh - var(--headerFixedHeight) - 20px), $scrollBarWidth: 4, $padding: 5)
+		overscroll-behavior: contain 
+
+	&__title 
+		+adap('margin-bottom', 20, 12)
+		+adap('padding-bottom', 20, 12)
+
+		border-bottom: 1px solid #383838
+		color: $active
+
+	&__search 
+		padding: 8px
+		width: 100%
+		height: 40px
+
+		border-radius: 8px
+		background: #EEF1F4
+
+		font-size: 12px
+		line-height: 1.33333
+		color: $text
+		
+
+		&:focus-visible
+			box-shadow: 0 0 0 1px $active  
+
+		&::placeholder
+			color: #7d7d7d
+
+
+	@media (max-width: 767px)
+		&__content 
+			grid-template-columns: 100%
+
+.filter
+	&__block 
+		&:not(:last-child) 
+			+adap('padding-bottom', 22, 16)
+			+adap('margin-bottom', 22, 16)
+
+			border-bottom: 1px solid #383838
+
+		&-top 
+			display: flex
+			align-items: center
+			justify-content: space-between
+			gap: 12px
+
+			+adap('font-size', 24, 16)
+			text-align: left
+			cursor: pointer
+
+			&:after
+				content: ''
+
+				+adap('width', 28, 24)
+				+adap('height', 28, 24)
+
+				+mask(arrow(71%), #fff) 
+				+t
+
+			&.active 
+				&:after
+					rotate: -180deg
+
+		&-checkboxes 
+			display: grid
+			gap: 12px
+			align-items: start
+			+adap('margin-top', 16, 12)
+
+			line-height: 1.4
+			color: #7d7d7d
+			+adap('font-size', 20, 16)
+
+			.checkbox 
+				&__input 
+					+adap('flex-basis', 32, 24)
+					+adap('width', 32, 24)
+					+adap('height', 32, 24)
+
+					&:before
+						width: 100%
+						height: 100%
+
+						border-color: #7d7d7d
+
+					&:after
+						content: ''
+
+						position: absolute
+						left: 50%
+						top: 50%
+						translate: -50% -50%
+						width: 40%
+						height: 40%
+
+						background: #7d7d7d
+						opacity: 0
+						+t(.2)
+
+			
+					&:checked 
+						&:after
+							opacity: 1 
+
+
+
+
+.catalog
+	&-wrapper
+		display: grid 
+		grid-template-columns: repeat(auto-fill, minmax(max(30%, 200px), 1fr))
+		+adap('gap', 20, 16) 
+		+adap('min-height', 500, 200) 
+
+		@media (max-width: 575px)
+			grid-template-columns: repeat(2, 1fr)
+
+	&__item
+		+adap('border-radius', 20, 16) 
+		background: #EEF1F4
+		+t 
+		overflow: hidden   
+
+		+hov
+			box-shadow: 0 0 30px 0 rgba(235, 136, 71, 0.25)
+
+		&-img 
+			width: 100%
+			+adap('height', 254, 180)
+			object-fit: cover 
+
+		&-content 
+			display: grid
+			gap: 8px
+			align-content: start
+			padding: 20px 12px
+
+		&-art 
+			font-size: 12px
+			color: #999 
+
+		&-title 
+			+adap('font-size', 18, 16)
+			font-weight: 600
+
+		&-text 
+			font-size: 14px
+			color: #999
+
+		&-price 
+			color: $active 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

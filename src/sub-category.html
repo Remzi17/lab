@@ -1,0 +1,53 @@
+@@include('assets/html/head.html', {
+"class" : '" "'
+})
+
+<div class="header-main">
+	<img src="assets/img/header/1.webp" class="header-main__bg" alt="" pic>
+	<div class="container">
+		<div class="header-main-wrapper">
+			@@include("assets/html/crumbs.html", {
+			"list": [
+			{
+			"title":"Каталог",
+			"link":'"catalog.html"'
+			},
+			{
+			"title":"Опоры",
+			"link":'"category.html"'
+			},
+			{
+			"title":"Мадрид",
+			"link":'"#"'
+			},
+			]
+			})
+
+			<h1 class="title-2">Опоры для столов</h1>
+		</div>
+	</div>
+</div>
+
+<div class="section catalog services">
+	<div class="container">
+		<div class="catalog__content">
+			@@include("assets/html/catalog-left.html")
+			<div class="catalog__right">
+				<div class="catalog-wrapper">
+					@@for(var i = 0; i < 9; i++){
+						<div class="wow fadeIn hover-translate catalog__item" data-wow-delay='.2s'>
+							<img src="assets/img/card/3.webp" class="catalog__item-img" width="413" height="354" alt="" loading="lazy" decoding="async">
+							<div class="catalog__item-content">
+								<div class="catalog__item-art">OP.08.720.9005</div>
+								<div class="catalog__item-title">Опора МАДРИД, L.800 H.720</div>
+								<div class="catalog__item-text">Отделка: Черный бархат матовый</div>
+							</div>
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@@include('assets/html/foot.html')

@@ -1,0 +1,23 @@
+import { fixedMenu } from '../components/fixedmenu';
+import { gallery } from '../components/gallery';
+import { map } from '../components/map';
+import { popup } from '../components/popup';
+import { rating } from '../components/rating';
+import { form } from '../components/form';
+import { text } from '../components/text';
+import { scroll } from '../components/scroll';
+import { tab } from '../components/tab';
+import { burger } from '../components/burger';
+import { spoller } from '../components/spoller';
+
+burger();
+gallery();
+map();
+popup();
+rating();
+scroll();
+tab();
+text();
+fixedMenu();
+form();
+spoller();

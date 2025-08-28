@@ -1,0 +1,180 @@
+.feedback
+	position: relative
+	background: #eef1f4
+
+	&-wrapper
+		display: flex
+		scroll-snap-type: x mandatory
+		+scrollbar-x(100%, $scrollBarHeight: 5, $padding: 58) 
+		+adap('gap', 20, 16)
+
+		margin-top: -12px 
+		padding-top: 12px
+
+		@media (max-width: 991px)
+			padding-bottom: 32px
+
+		@media (max-width: 575px)
+			padding-bottom: 20px
+
+
+	&__item 
+		position: relative
+		z-index: 2
+		display: grid
+		+adap('gap', 20, 16)
+		align-content: start
+		padding: 24px 16px
+		min-width: 305px
+
+		background: #fff
+		+adap('border-radius', 20, 16)
+
+		@media not (any-hover: hover)
+			scroll-snap-align: start
+
+		&-top 
+			display: grid
+			grid-template-columns: auto 1fr
+			align-items: center
+			gap: 16px
+
+		&-photo 
+			+adap('width', 76, 48)
+			aspect-ratio: 1
+
+
+			img 
+				width: 100%
+				height: 100%
+				border-radius: 50%
+				object-fit: cover
+
+		&-right 
+			display: grid
+			gap: 8px
+
+		&-name 
+			font-size: 20px
+			line-height: 1.4
+
+		&-rating 
+			display: flex
+			align-items: center
+			gap: 4px
+
+			svg 
+				width: 20px
+				aspect-ratio: 1
+				fill: #eef1f4
+
+				&.active 
+					fill: $active
+
+		&-text
+			font-size: 12px
+			line-height: 1.66667
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

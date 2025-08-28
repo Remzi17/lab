@@ -1,0 +1,204 @@
+
+.text-block   
+	text-wrap: pretty 
+	line-height: 1.5  
+
+	&>*:last-child
+		margin-bottom: 0
+
+	h1, h2, h3, b, strong
+		font-weight: 700
+
+	h2
+		+adap('margin-bottom', 28, 20)
+		+title-3
+
+	h3
+		+adap('margin-bottom', 24, 16)
+		+title-4
+ 
+	h4
+		+adap('margin-bottom', 20, 12)
+		+title-5 
+
+	p
+		&:not(:has(+ul,+ol))     
+			+adap('margin-bottom', 20, 12)
+
+		&:last-child
+			margin-bottom: 0 
+
+	h2, h3, h4
+		&+ul 
+			padding-top: 0 !important  
+
+	hr 
+		margin-bottom: 16px  
+
+	// Списки 
+	$dots-size: 4
+	$dots-size-mobile: 4
+	$dots-gap: 16 // Отступ между маркером и текстом
+	$dots-gap-mobile: 12
+
+	$list-padding: 24 // Внешние отступы
+	$list-padding-mobile: 16 
+
+	$li-gap: 16 // gap между li
+	$li-gap-mobile: 12
+
+	ul, ol  
+		display: grid
+
+		@if ($li-gap == $li-gap-mobile)
+			gap: #{$li-gap+px}
+
+		@else
+			+adap('gap', $li-gap, $li-gap-mobile)
+
+  
+		@if ($list-padding == $list-padding-mobile)
+			&:not(:first-child)
+				padding-top: #{$list-padding+px}
+
+		@else
+			&:not(:first-child)
+				+adap('padding-top', $list-padding, $list-padding-mobile)
+
+		&:not(:last-child)
+			@if ($list-padding == $list-padding-mobile)
+				padding-bottom: #{$list-padding+px}
+
+			@else
+				+adap('padding-bottom', $list-padding, $list-padding-mobile)
+
+
+		ul, ol
+			padding-top: 10px
+
+		li
+			&>*
+				display: contents
+
+	ul
+		&>li
+			position: relative
+
+			@if ($dots-gap == $dots-gap-mobile)
+				padding-left: #{$dots-size+$dots-gap+px}
+
+			@else 
+				+adap('padding-left', calculate($dots-size, $dots-gap), calculate($dots-size-mobile, $dots-gap-mobile))
+
+			&:before
+				content: ''
+						
+				position: absolute
+				left: 0
+				top: .5em   
+	
+				@if ($dots-size == $dots-size-mobile)
+					width: #{$dots-size+px}
+					height: #{$dots-size+px}
+					flex-basis: #{$dots-size+px}
+
+				@else
+					+adap('width', $dots-size, $dots-size-mobile)
+					+adap('height', $dots-size, $dots-size-mobile)
+					+adap('flex-basis', $dots-size, $dots-size-mobile)
+				
+				flex-grow: 0
+				flex-shrink: 0
+
+				background: $active
+				border-radius: 50% 
+	
+	ol
+		list-style: none
+		counter-reset: number 
+ 
+		&>li
+			&:before
+				counter-increment: number 
+				content: counters(number,".") ". "
+
+				font: inherit
+		ol
+			padding-left: 20px
+
+	h2, h3, h4, h5, h6
+		&+ul, 
+		&+ol  
+			padding-top: 0
+
+	blockquote
+		margin: 0
+		+adap('padding', 40, 16)
+
+		+adap('font-size', 20, 16)
+		background: $gray 
+
+	mark 
+		background: lighten($active, 7%)
+
+	a
+		text-decoration: underline
+
+		&[data-gallery]
+			display: flex
+	
+			img
+				width: 100%
+ 
+	.table
+		width: 100%
+		overflow-y: hidden
+		overflow-x: auto
+		-webkit-overflow-scrolling: touch
+
+		+scrollbar-x(100%, $scrollBarHeight: 4, $padding: 5) 
+		 
+	table 
+		width: 100%
+		border-collapse: collapse
+		
+		th
+			font-weight: 700
+			text-align: left
+
+		td, th
+			padding: 16px
+
+		tr
+			&>:first-child
+				border-top-left-radius: 12px
+				border-bottom-left-radius: 12px
+
+			&>:last-child
+				border-top-right-radius: 12px
+				border-bottom-right-radius: 12px
+
+		thead
+			background: #000
+			color: #fff
+	 
+		tbody 
+			tr
+				&:nth-child(even)
+					background: #ccc
+
+				&:nth-child(odd)
+					background: #fafafa
+
+		&:not(:has(thead))
+			tbody 
+				tr
+					position: relative
+
+					&>th:first-child
+						position: sticky
+						left: 0
+						top: 0
+
+						background: inherit
+

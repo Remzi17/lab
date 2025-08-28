@@ -1,0 +1,243 @@
+.input-wrapper 
+	+adap('gap', 40, 20)
+	justify-items: start
+
+.input, .textarea
+	width: 100%
+
+	padding-bottom: 8px
+
+	border-bottom: 1px solid #d9d9d9
+
+	font-size: 14px
+
+	$error-color: #f03
+
+	&:user-invalid
+		color: $error-color
+		border-color: $error-color
+
+		&::placeholder
+			color: $error-color
+
+
+
+.input-file
+	$input-file-icon-color: currentColor
+
+	$input-file-icon-size: 20
+	$input-file-icon-size-mobile: 20
+
+	$input-file-gap: 8
+	$input-file-gap-mobile: 8
+
+	position: relative
+	width: 100%
+	font-size: 14px
+	
+	+t
+
+	+hov
+		color: $active
+
+	input 
+		position: absolute
+		inset: 0
+		opacity: 0
+
+	&-text
+		display: flex
+		align-items: flex-start
+
+		@if $input-file-gap != $input-file-gap-mobile
+			+adap('gap', $input-file-gap, $input-file-gap-mobile)
+
+		@else
+			gap: #{$input-file-gap+px}
+
+		&:before 
+			content: ''
+			+abs 
+			z-index: 1
+			cursor: pointer
+
+		&:after
+			content: ''
+			position: relative
+			z-index: 2
+			align-self: center
+			flex-shrink: 0
+
+			@if $input-file-icon-size != $input-file-icon-size-mobile
+				+adap('flex-basis', $input-file-icon-size, $input-file-icon-size-mobile)
+
+			@else
+				flex-basis: #{$input-file-icon-size+px}
+
+			aspect-ratio: 1
+
+			+mask(url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_174_1656)'%3E%3Cpath d='M5.35321 19.1563C2.40218 19.1563 0 16.7509 0 13.7958C0 12.3591 0.548839 11.0257 1.5435 10.0299L6.90753 4.65297L7.52181 5.26793L2.15762 10.6448C1.32616 11.4774 0.869512 12.5932 0.869512 13.785C0.869512 16.2721 2.88049 18.2856 5.35321 18.2856C6.54897 18.2856 7.67928 17.8177 8.52173 16.9687L18.1739 7.30332C18.7881 6.68837 19.125 5.86662 19.125 5.00135C19.125 3.20543 17.663 1.74146 15.8695 1.74146C15 1.74146 14.1848 2.07883 13.5707 2.69379L4.07067 12.2121C3.69029 12.5932 3.47821 13.1047 3.47821 13.6434C3.47821 14.7592 4.38593 15.6734 5.50542 15.6734C6.04885 15.6734 6.55438 15.4612 6.93476 15.0801L12.1305 9.87746L12.7446 10.4924L7.54888 15.6952C7.00004 16.2448 6.27717 16.5441 5.50001 16.5441C3.90763 16.5441 2.6087 15.2434 2.6087 13.6434C2.6087 12.8706 2.90756 12.1413 3.45655 11.5917L12.962 2.07883C13.7391 1.30061 14.7717 0.870605 15.8749 0.870605C18.1521 0.870605 20.0001 2.72105 20.0001 5.00135C20.0001 6.1061 19.5706 7.14006 18.7935 7.9237L9.14126 17.5836C8.13036 18.6013 6.78255 19.1563 5.35321 19.1563Z' fill='white' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_174_1656'%3E%3Crect width='20' height='20' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") left center / contain no-repeat, $input-file-icon-color)
+
+
+.form 
+	&__text 
+		font-weight: 300
+		font-size: 12px
+		color: rgba($text, .6)
+
+		a  
+			+hov
+				color: $active 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

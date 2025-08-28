@@ -1,0 +1,153 @@
+.features
+	&-wrapper
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		gap: 74px
+
+		@media (max-width: #{$firstBreakpoint + px})
+			+adap('column-gap', 24, 16, $firstBreakpoint)
+			+adap('row-gap', 24, 20, $firstBreakpoint)
+
+	&__item
+		display: grid
+		grid-template-columns: 100%
+		+adap('gap', 16, 12)
+		justify-items: center
+		align-content: start
+
+		text-align: center
+
+		&-top 
+			display: flex
+			align-items: center
+			justify-content: center
+
+			+adap('font-size', 30, 24)
+			color: $active
+
+		&-icon 
+			+adap('width', 80, 48)
+			+adap('height', 80, 48)
+
+			img 
+				max-width: 90% 
+				max-height: 90%
+
+		&-text 
+			font-size: 14px
+
+	@media (max-width: 991px)
+		&-wrapper
+			grid-template-columns: repeat(2, 1fr)
+
+		&__item 
+			&:last-child
+				&:nth-child(odd)
+					grid-column: 1/-1
+
+			&-text 
+				max-width: 400px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

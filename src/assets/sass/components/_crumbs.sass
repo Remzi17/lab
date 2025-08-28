@@ -1,0 +1,68 @@
+$row-gap: 8px 
+$column-gap: 20
+$column-gap-mobile: 20
+
+.crumbs
+	position: relative
+	z-index: 4
+
+	display: inline-flex
+	align-items: center
+	flex-wrap: wrap
+	+adap('column-gap', $column-gap, $column-gap-mobile)
+	row-gap: $row-gap
+	padding: 13px 32px 
+	 
+	font-size: 14px
+	color: #fff
+
+	&:after
+		content: ''
+
+		position: absolute
+		right: 0
+		top: 0
+		width: 100vw
+		height: 100%
+		z-index: -1
+
+		background: rgba(28, 25, 24, 0.41)
+		border-radius: 0 4px 4px 0 
+		pointer-events: none
+
+	&-wrapper
+		position: absolute
+		+adap('top', 24, 12)
+		left: 0
+		overflow: hidden
+
+		.container 
+			display: flex
+
+	li 
+		&:not(:last-child)
+			color: #bfbfbf
+
+			@media (any-hover: hover)
+				&:hover
+					color: $active
+
+					&:before
+						color: #bfbfbf
+
+		&:last-child
+			pointer-events: none
+
+			a
+				cursor: default 
+
+		&:not(:last-child)
+			position: relative
+			
+			&:before
+				content: '/'
+
+				position: absolute
+				+adap('right', math.div($column-gap, -2), math.div($column-gap-mobile, -2))
+				top: 50%
+				translate: 50% -50%
